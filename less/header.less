@@ -1,0 +1,139 @@
+
+.parallax-header {
+    height: 90vh;
+    width: 100%;
+    position: relative;
+
+    @media @tablet {
+        height: 70vh;
+    }
+
+    .content-container {
+        max-width: 1080px;
+        padding: 0 2rem;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-content {
+        color: @black;
+        background: rgba(255, 255, 255, .7);
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: fit-content;
+        margin-left: -2rem;
+        padding: 3rem 1.5rem;
+        max-width: 450px;
+
+        @media @tablet {
+            width: 50%;
+            height: 100%;
+            max-width: 100%;
+            margin-left: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            line-height: 1.2; 
+
+            span {
+                display: block;
+            }
+
+            @media @mobile {
+                font-size: 4rem;
+                max-width: 400px;
+            }
+
+            @media @tablet {
+                font-size: 5rem;
+            }
+        }
+
+        p {
+            color: @readableGray;
+            margin-bottom: 1rem;
+        }
+
+        .search-form {
+            min-height: 40px;
+            display: flex;
+            margin-top: 2rem;
+            z-index: 2;
+
+            @media @tablet {
+                margin-top: 4rem;
+                min-height: 50px;
+                margin-right: -100px;
+            }
+
+            input {
+                display: inline-block;
+                width: 100%;
+                border: none; 
+                outline: none;
+
+                &[type="search"] {
+                    width: 70%;
+                    padding: 0 1rem;
+                    font-size: 1.7rem;
+                    color: @readableGray;
+                    background: @faintGray;
+                    border-right: none;
+
+                    @media @tablet {
+                        .borderline(1px);
+                        padding: 0 1.5rem;
+                        width: calc(100% - 100px);
+                    }
+                }
+
+                &[placeholder] {
+                    font-size: 1.3rem;
+                }
+
+                &[type="button"] {
+                    width: 30%;
+                    max-width: 100px;
+                    background: @primary;
+                    color: @white;
+                    font-size: 1.5rem;
+                    font-family: @headingFont;
+                }
+            }
+        }
+    }
+
+    .hero-background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+
+        @media @tablet {
+            width: 50%;
+        }
+
+        .image-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

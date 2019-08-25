@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Alegreya Sans', sans-serif;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.page-loader {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  z-index: 3;
+}
+.parallax-header {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .parallax-header {
+    height: 70vh;
+  }
+}
+.parallax-header .content-container {
+  max-width: 1080px;
+  padding: 0 2rem;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.parallax-header .hero-content {
+  color: #000;
+  background: rgba(255, 255, 255, 0.7);
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: fit-content;
+  margin-left: -2rem;
+  padding: 3rem 1.5rem;
+  max-width: 450px;
+}
+@media (min-width: 768px) {
+  .parallax-header .hero-content {
+    width: 50%;
+    height: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.parallax-header .hero-content h1 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+}
+.parallax-header .hero-content h1 span {
+  display: block;
+}
+@media (min-width: 368px) {
+  .parallax-header .hero-content h1 {
+    font-size: 4rem;
+    max-width: 400px;
+  }
+}
+@media (min-width: 768px) {
+  .parallax-header .hero-content h1 {
+    font-size: 5rem;
+  }
+}
+.parallax-header .hero-content p {
+  color: #777;
+  margin-bottom: 1rem;
+}
+.parallax-header .hero-content .search-form {
+  min-height: 40px;
+  display: flex;
+  margin-top: 2rem;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  .parallax-header .hero-content .search-form {
+    margin-top: 4rem;
+    min-height: 50px;
+    margin-right: -100px;
+  }
+}
+.parallax-header .hero-content .search-form input {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.parallax-header .hero-content .search-form input[type="search"] {
+  width: 70%;
+  padding: 0 1rem;
+  font-size: 1.7rem;
+  color: #777;
+  background: #f9f9f9;
+  border-right: none;
+}
+@media (min-width: 768px) {
+  .parallax-header .hero-content .search-form input[type="search"] {
+    border: 1px solid #eee;
+    padding: 0 1.5rem;
+    width: calc(100% - 100px);
+  }
+}
+.parallax-header .hero-content .search-form input[placeholder] {
+  font-size: 1.3rem;
+}
+.parallax-header .hero-content .search-form input[type="button"] {
+  width: 30%;
+  max-width: 100px;
+  background: #f38181;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+.parallax-header .hero-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .parallax-header .hero-background {
+    width: 50%;
+  }
+}
+.parallax-header .hero-background .image-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.parallax-header .hero-background .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.choose-experience {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background: #fff;
+  min-height: 100vh;
+  position: absolute;
+  top: 100%;
+}
