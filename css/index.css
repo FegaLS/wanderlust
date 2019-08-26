@@ -52,11 +52,6 @@ p {
   scroll-snap-points-x: repeat(300px);
   scroll-snap-type: x mandatory;
 }
-@media (min-width: 768px) {
-  .slide-container {
-    padding: 0 1.3rem;
-  }
-}
 .slide {
   scroll-snap-align: center;
   display: inline-block;

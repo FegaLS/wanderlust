@@ -10,7 +10,6 @@
   "author": "Chioma Nkem-Eze",
   "license": "ISC",
   "dependencies": {
-    "@glidejs/glide": "^3.3.0",
     "less": "^3.10.3",
     "less-watch-compiler": "^1.13.0",
     "live-server": "^1.2.1"
