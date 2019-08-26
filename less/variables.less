@@ -13,7 +13,7 @@
 //Media Queries
 @mobile: ~"(min-width: 368px)";
 @pre-tablet: ~"(min-width: 500px)";
-@tablet: ~"(min-width: 768px)";
+@tablet: ~"(min-width: 992px)";
 
 
 //Mixins
@@ -21,14 +21,18 @@
     border: @width solid #eee;
 }
 
-.section-wrapper() {
+.section-wrapper(@p-top) {
     max-width: 1080px;
     margin: 0 auto;
     padding: 5rem 2rem 0;
     width: 100%;
     height: 100%;
 
-    @media @tablet {
+    @media @pre-tablet {
         padding: 7rem 2rem 0;
+    }
+
+    @media @tablet {
+        padding: @p-top 2rem 0;
     }
 }

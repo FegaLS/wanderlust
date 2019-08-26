@@ -10,6 +10,12 @@ body {
   font-family: 'Lato', sans-serif;
   overflow-x: hidden;
 }
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
 h1,
 h2,
 h3,
@@ -21,13 +27,14 @@ h6 {
 p {
   font-size: 1.6rem;
   line-height: 1.4;
+  color: #777;
 }
 .parallax {
   height: 85vh;
   width: 100%;
   position: relative;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .parallax {
     height: 70vh;
   }
@@ -57,29 +64,31 @@ p {
   display: inline-block;
   min-height: 400px;
   min-width: 250px;
-  border-radius: 10px;
   transition: 0.4s ease-out;
   position: relative;
   left: 0;
   z-index: 3;
   margin-right: 1.5rem;
+  overflow: hidden;
 }
 .slide:last-child {
   margin-right: 2rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .slide:last-child {
     margin-right: 3.5rem;
   }
 }
-.slide:hover {
-  transform: translateY(-20px);
-  transition: 0.4s ease-out;
+@media (min-width: 500px) {
+  .slide:hover {
+    transform: translateY(-20px);
+  }
 }
-.slide:hover ~ .card {
-  position: relative;
-  left: 50px;
-  transition: 0.4s ease-out;
+.slide:hover img {
+  transform: scale(1.1);
+}
+.slide:hover:before {
+  background: rgba(0, 0, 0, 0);
 }
 .slide:before {
   content: "";
@@ -90,8 +99,8 @@ p {
   right: 0;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
-  background: linear-gradient(transparent, #000000ad);
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.4s ease-out;
   z-index: 2;
 }
 .slide img {
@@ -99,7 +108,99 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  transition: 0.4s ease-out;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (min-width: 500px) {
+  .cards {
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 992px) {
+  .cards {
+    max-width: 100%;
+  }
+}
+.cards .card {
+  max-width: 300px;
+  width: 100%;
+  min-height: 300px;
+  position: relative;
+  margin-top: 3rem;
+  transition: 0.4s ease-out;
+}
+@media (min-width: 500px) {
+  .cards .card {
+    width: calc(50% - 15px);
+  }
+}
+@media (min-width: 992px) {
+  .cards .card {
+    width: calc(25% - 25px);
+  }
+}
+@media (min-width: 500px) {
+  .cards .card:hover {
+    transform: translateY(-20px);
+  }
+}
+.cards .card:hover .card-image::before {
+  background: rgba(0, 0, 0, 0);
+}
+.cards .card:hover .card-image img {
+  transform: scale(1.1);
+}
+.cards .card a {
+  display: block;
+}
+.cards .card a .card-content {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+@media (min-width: 500px) {
+  .cards .card a .card-content {
+    text-align: left;
+  }
+}
+.cards .card a .card-content h2 {
+  font-size: 2rem;
+  color: #000;
+  text-align: inherit;
+}
+.cards .card a .card-content p {
+  font-size: 1.4rem;
+}
+.cards .card .card-image {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+.cards .card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease-out;
+}
+.cards .card .card-image::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.4s ease-out;
+  z-index: 2;
 }
 header.content-container {
   max-width: 1080px;
@@ -122,7 +223,7 @@ header.content-container .hero-content {
   padding: 3rem 1.5rem;
   max-width: 450px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header.content-container .hero-content {
     width: 50%;
     height: 100%;
@@ -147,7 +248,7 @@ header.content-container .hero-content h1 span {
     max-width: 400px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header.content-container .hero-content h1 {
     font-size: 5rem;
   }
@@ -162,7 +263,7 @@ header.content-container .hero-content .search-form {
   margin-top: 2rem;
   z-index: 2;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header.content-container .hero-content .search-form {
     margin-top: 4rem;
     min-height: 50px;
@@ -183,7 +284,7 @@ header.content-container .hero-content .search-form input[type="search"] {
   background: #f9f9f9;
   border-right: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header.content-container .hero-content .search-form input[type="search"] {
     border: 1px solid #eee;
     padding: 0 1.5rem;
@@ -208,7 +309,7 @@ header.content-container .hero-background {
   right: 0;
   z-index: -1;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header.content-container .hero-background {
     width: 50%;
   }
@@ -228,6 +329,7 @@ header.content-container .hero-background .image-wrapper img {
   position: absolute;
   top: 100%;
   width: 100%;
+  padding-bottom: 9rem;
 }
 .content-wrapper {
   max-width: 1080px;
@@ -235,36 +337,60 @@ header.content-container .hero-background .image-wrapper img {
   padding: 5rem 2rem 0;
   width: 100%;
   height: 100%;
+  text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .content-wrapper {
     padding: 7rem 2rem 0;
   }
 }
-.content-wrapper h2 {
+@media (min-width: 992px) {
+  .content-wrapper {
+    padding: 9rem 2rem 0;
+  }
+}
+@media (min-width: 992px) {
+  .content-wrapper {
+    text-align: left;
+  }
+}
+.content-wrapper > h2 {
   font-size: 3.2rem;
   line-height: 1.2;
   text-align: center;
 }
-.content-wrapper h2 span {
+.content-wrapper > h2 span {
   display: block;
+  font-size: 2.5rem;
 }
 @media (min-width: 368px) {
-  .content-wrapper h2 {
+  .content-wrapper > h2 {
     font-size: 3.5rem;
   }
 }
-@media (min-width: 768px) {
-  .content-wrapper h2 {
+@media (min-width: 992px) {
+  .content-wrapper > h2 {
     font-size: 4.5rem;
     text-align: left;
   }
+}
+.content-wrapper > p {
+  max-width: 500px;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .content-wrapper > p {
+    margin: 0;
+  }
+}
+.content-wrapper.the-features {
+  padding-top: 7rem;
 }
 .content-wrapper.the-features h2 {
   font-size: 1.5rem;
   text-transform: uppercase;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .content-wrapper.the-features h2 {
     text-align: center;
   }
@@ -281,7 +407,7 @@ header.content-container .hero-background .image-wrapper img {
     justify-content: space-between;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .the-features {
     max-width: 1080px;
   }
@@ -300,13 +426,8 @@ header.content-container .hero-background .image-wrapper img {
   text-align: center;
   margin-bottom: 3rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .the-features > div {
     margin-bottom: 0;
-  }
-}
-@media (min-width: 768px) and (max-width: 937px) {
-  .the-features > div:nth-of-type(4) {
-    display: none;
   }
 }

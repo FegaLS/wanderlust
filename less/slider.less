@@ -26,30 +26,33 @@
     display: inline-block;
     min-height: 400px;
     min-width: 250px;
-    border-radius: 10px;
     transition: 0.4s ease-out;
     position: relative;
     left: 0;
     z-index: 3;
     margin-right: 1.5rem;
+    overflow: hidden;
 
     &:last-child {
         margin-right: 2rem;
 
-        @media @tablet {
+        @media @pre-tablet {
             margin-right: 3.5rem;
         }
     }
 
     &:hover {
-        transform: translateY(-20px);
-        transition: 0.4s ease-out;
-    }
+        @media @pre-tablet {
+            transform: translateY(-20px);
+        }
 
-    &:hover ~ .card {
-        position: relative;
-        left: 50px;
-        transition: 0.4s ease-out;
+        img {
+            transform: scale(1.1);
+        }
+
+        &:before {
+            background: rgba(0, 0, 0, 0);
+        }
     }
 
     &:before {
@@ -61,8 +64,8 @@
         right: 0;
         width: 100%;
         height: 100%;
-        border-radius: 10px;
-        background: linear-gradient(transparent, #000000ad);
+        background: rgba(0, 0, 0, .3);
+        transition: 0.4s ease-out;
         z-index: 2;
     }
 
@@ -71,6 +74,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 10px;
+        transition: 0.4s ease-out;
     }
 }
