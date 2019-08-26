@@ -11,10 +11,10 @@ timeline
 .to('#second', 6, {y: -200}, '-=6')
 .to('#first', 6, {y: -100}, '-=6')
 .to('.main-content', 6, {top: '0%'}, '-=6')
-.to('.parallax-header .hero-content', 6, {y: -600,}, '-=6')
+.to('header.content-container .hero-content', 6, {y: -600,}, '-=6')
 
 const scene = new ScrollMagic.Scene({
-    triggerElement: 'section.parallax-header',
+    triggerElement: 'section.parallax',
     duration: '200%',
     triggerHook: 0
 })

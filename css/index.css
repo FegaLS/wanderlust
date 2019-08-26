@@ -22,15 +22,15 @@ p {
   font-size: 1.6rem;
   line-height: 1.4;
 }
-.page-loader {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #000;
-  z-index: 3;
+.parallax {
+  height: 85vh;
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .parallax {
+    height: 70vh;
+  }
 }
 .slider {
   width: 100vw;
@@ -90,6 +90,7 @@ p {
   right: 0;
   width: 100%;
   height: 100%;
+  border-radius: 10px;
   background: linear-gradient(transparent, #000000ad);
   z-index: 2;
 }
@@ -100,17 +101,7 @@ p {
   object-fit: cover;
   border-radius: 10px;
 }
-.parallax-header {
-  height: 85vh;
-  width: 100%;
-  position: relative;
-}
-@media (min-width: 768px) {
-  .parallax-header {
-    height: 70vh;
-  }
-}
-.parallax-header .content-container {
+header.content-container {
   max-width: 1080px;
   padding: 0 2rem;
   width: 100%;
@@ -120,7 +111,7 @@ p {
   flex-direction: column;
   justify-content: center;
 }
-.parallax-header .hero-content {
+header.content-container .hero-content {
   color: #000;
   background: rgba(255, 255, 255, 0.7);
   position: relative;
@@ -132,7 +123,7 @@ p {
   max-width: 450px;
 }
 @media (min-width: 768px) {
-  .parallax-header .hero-content {
+  header.content-container .hero-content {
     width: 50%;
     height: 100%;
     max-width: 100%;
@@ -143,48 +134,48 @@ p {
     justify-content: center;
   }
 }
-.parallax-header .hero-content h1 {
+header.content-container .hero-content h1 {
   font-size: 3.2rem;
   line-height: 1.2;
 }
-.parallax-header .hero-content h1 span {
+header.content-container .hero-content h1 span {
   display: block;
 }
 @media (min-width: 368px) {
-  .parallax-header .hero-content h1 {
+  header.content-container .hero-content h1 {
     font-size: 4rem;
     max-width: 400px;
   }
 }
 @media (min-width: 768px) {
-  .parallax-header .hero-content h1 {
+  header.content-container .hero-content h1 {
     font-size: 5rem;
   }
 }
-.parallax-header .hero-content p {
+header.content-container .hero-content p {
   color: #777;
   margin-bottom: 1rem;
 }
-.parallax-header .hero-content .search-form {
+header.content-container .hero-content .search-form {
   min-height: 40px;
   display: flex;
   margin-top: 2rem;
   z-index: 2;
 }
 @media (min-width: 768px) {
-  .parallax-header .hero-content .search-form {
+  header.content-container .hero-content .search-form {
     margin-top: 4rem;
     min-height: 50px;
     margin-right: -100px;
   }
 }
-.parallax-header .hero-content .search-form input {
+header.content-container .hero-content .search-form input {
   display: inline-block;
   width: 100%;
   border: none;
   outline: none;
 }
-.parallax-header .hero-content .search-form input[type="search"] {
+header.content-container .hero-content .search-form input[type="search"] {
   width: 70%;
   padding: 0 1rem;
   font-size: 1.7rem;
@@ -193,24 +184,24 @@ p {
   border-right: none;
 }
 @media (min-width: 768px) {
-  .parallax-header .hero-content .search-form input[type="search"] {
+  header.content-container .hero-content .search-form input[type="search"] {
     border: 1px solid #eee;
     padding: 0 1.5rem;
     width: calc(100% - 100px);
   }
 }
-.parallax-header .hero-content .search-form input[placeholder] {
+header.content-container .hero-content .search-form input[placeholder] {
   font-size: 1.3rem;
 }
-.parallax-header .hero-content .search-form input[type="button"] {
+header.content-container .hero-content .search-form input[type="button"] {
   width: 30%;
   max-width: 100px;
-  background: #f38181;
+  background: #a1d3a2;
   color: #fff;
   font-size: 1.5rem;
   font-family: 'Alegreya Sans', sans-serif;
 }
-.parallax-header .hero-background {
+header.content-container .hero-background {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -218,16 +209,16 @@ p {
   z-index: -1;
 }
 @media (min-width: 768px) {
-  .parallax-header .hero-background {
+  header.content-container .hero-background {
     width: 50%;
   }
 }
-.parallax-header .hero-background .image-wrapper {
+header.content-container .hero-background .image-wrapper {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.parallax-header .hero-background .image-wrapper img {
+header.content-container .hero-background .image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -238,7 +229,7 @@ p {
   top: 100%;
   width: 100%;
 }
-.main-content .content-wrapper {
+.content-wrapper {
   max-width: 1080px;
   margin: 0 auto;
   padding: 5rem 2rem 0;
@@ -246,25 +237,76 @@ p {
   height: 100%;
 }
 @media (min-width: 768px) {
-  .main-content .content-wrapper {
-    padding: 8rem 2rem 0;
+  .content-wrapper {
+    padding: 7rem 2rem 0;
   }
 }
-.main-content .content-wrapper h2 {
+.content-wrapper h2 {
   font-size: 3.2rem;
   line-height: 1.2;
+  text-align: center;
 }
-.main-content .content-wrapper h2 span {
+.content-wrapper h2 span {
   display: block;
 }
 @media (min-width: 368px) {
-  .main-content .content-wrapper h2 {
-    font-size: 4rem;
-    max-width: 400px;
+  .content-wrapper h2 {
+    font-size: 3.5rem;
   }
 }
 @media (min-width: 768px) {
-  .main-content .content-wrapper h2 {
+  .content-wrapper h2 {
     font-size: 4.5rem;
+    text-align: left;
+  }
+}
+.content-wrapper.the-features h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .content-wrapper.the-features h2 {
+    text-align: center;
+  }
+}
+.the-features {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 600px;
+}
+@media (min-width: 500px) {
+  .the-features {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .the-features {
+    max-width: 1080px;
+  }
+}
+.the-features p {
+  font-size: 1.4rem;
+}
+.the-features svg {
+  color: #a1d3a2;
+  max-width: 60px;
+  width: 100%;
+  height: auto;
+}
+.the-features > div {
+  max-width: 220px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .the-features > div {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 937px) {
+  .the-features > div:nth-of-type(4) {
+    display: none;
   }
 }
