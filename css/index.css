@@ -232,16 +232,13 @@ p {
   height: 100%;
   object-fit: cover;
 }
-.choose-experience {
-  height: 100%;
-  width: 100%;
-  z-index: 0;
+.main-content {
   background: #fff;
-  min-height: 100vh;
   position: absolute;
   top: 100%;
+  width: 100%;
 }
-.choose-experience .content-wrapper {
+.main-content .content-wrapper {
   max-width: 1080px;
   margin: 0 auto;
   padding: 5rem 2rem 0;
@@ -249,25 +246,25 @@ p {
   height: 100%;
 }
 @media (min-width: 768px) {
-  .choose-experience .content-wrapper {
-    padding: 9rem 2rem 0;
+  .main-content .content-wrapper {
+    padding: 8rem 2rem 0;
   }
 }
-.choose-experience .content-wrapper h2 {
+.main-content .content-wrapper h2 {
   font-size: 3.2rem;
   line-height: 1.2;
 }
-.choose-experience .content-wrapper h2 span {
+.main-content .content-wrapper h2 span {
   display: block;
 }
 @media (min-width: 368px) {
-  .choose-experience .content-wrapper h2 {
+  .main-content .content-wrapper h2 {
     font-size: 4rem;
     max-width: 400px;
   }
 }
 @media (min-width: 768px) {
-  .choose-experience .content-wrapper h2 {
+  .main-content .content-wrapper h2 {
     font-size: 4.5rem;
   }
 }
