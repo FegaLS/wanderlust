@@ -47,9 +47,18 @@ p {
 .slide-container {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0 1.3rem;
+  padding: 0 2rem;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: x mandatory;
+}
+@media (min-width: 768px) {
+  .slide-container {
+    padding: 0 1.3rem;
+  }
 }
 .slide {
+  scroll-snap-align: center;
   display: inline-block;
   min-height: 400px;
   min-width: 250px;
@@ -61,7 +70,12 @@ p {
   margin-right: 1.5rem;
 }
 .slide:last-child {
-  margin-right: 3.5rem;
+  margin-right: 2rem;
+}
+@media (min-width: 768px) {
+  .slide:last-child {
+    margin-right: 3.5rem;
+  }
 }
 .slide:hover {
   transform: translateY(-20px);
@@ -235,8 +249,7 @@ p {
 .choose-experience .content-wrapper {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 2rem;
-  padding-bottom: 0;
+  padding: 5rem 2rem 0;
   width: 100%;
   height: 100%;
 }

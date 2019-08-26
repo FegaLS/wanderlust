@@ -21,30 +21,3 @@ const scene = new ScrollMagic.Scene({
 .setTween(timeline)
 .setPin('section.parallax-header')
 .addTo(controller);
-
-
-//Slider
-const slider = {
-  
-    el: {
-      slider: document.querySelector(".slider"),
-      allSlides: document.querySelectorAll(".slide"),
-    },
-    
-    timing: 800,
-    slideWidth: 300,
-    
-    init: function() {
-      this.el.slider.addEventListener("scroll", function(event) {
-        slider.moveSlidePosition(event);
-      });
-    },
-    
-    moveSlidePosition: function(event) {
-      // Magic Numbers
-      this.el.allSlides.syle.backgroundPosition = `${event.target}.scrollLeft()/6-100+ "px 0"`;
-    },
-    
-  };
-  
-  slider.init();
