@@ -7,15 +7,25 @@
     position: absolute;
     top: 100%;
 
-    // .section-content {
-    //     h2 {
-    //         font-size: 5rem;
-    //         line-height: 1.2; 
-    //         max-width: 400px;
+    .content-wrapper {
+        .section-wrapper();
 
-    //         span {
-    //             display: block;
-    //         }
-    //     }
-    // }
+        h2 {
+            font-size: 3.2rem;
+            line-height: 1.2; 
+
+            span {
+                display: block;
+            }
+
+            @media @mobile {
+                font-size: 4rem;
+                max-width: 400px;
+            }
+
+            @media @tablet {
+                font-size: 4.5rem;
+            }
+        }
+    }
 }

@@ -15,9 +15,36 @@ timeline
 
 const scene = new ScrollMagic.Scene({
     triggerElement: 'section.parallax-header',
-    duration: '200%',
+    duration: '100%',
     triggerHook: 0
 })
 .setTween(timeline)
 .setPin('section.parallax-header')
 .addTo(controller);
+
+
+//Slider
+const slider = {
+  
+    el: {
+      slider: document.querySelector(".slider"),
+      allSlides: document.querySelectorAll(".slide"),
+    },
+    
+    timing: 800,
+    slideWidth: 300,
+    
+    init: function() {
+      this.el.slider.addEventListener("scroll", function(event) {
+        slider.moveSlidePosition(event);
+      });
+    },
+    
+    moveSlidePosition: function(event) {
+      // Magic Numbers
+      this.el.allSlides.syle.backgroundPosition = `${event.target}.scrollLeft()/6-100+ "px 0"`;
+    },
+    
+  };
+  
+  slider.init();

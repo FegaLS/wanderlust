@@ -32,6 +32,65 @@ p {
   background: #000;
   z-index: 3;
 }
+.slider {
+  width: 100vw;
+  padding-top: 3rem;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.slide-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.3rem;
+}
+.slide {
+  display: inline-block;
+  min-height: 400px;
+  min-width: 250px;
+  border-radius: 10px;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0;
+  z-index: 3;
+  margin-right: 1.5rem;
+}
+.slide:last-child {
+  margin-right: 3.5rem;
+}
+.slide:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+.slide:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+.slide:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, #000000ad);
+  z-index: 2;
+}
+.slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
 .parallax-header {
   height: 85vh;
   width: 100%;
@@ -172,4 +231,35 @@ p {
   min-height: 100vh;
   position: absolute;
   top: 100%;
+}
+.choose-experience .content-wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .choose-experience .content-wrapper {
+    padding: 9rem 2rem 0;
+  }
+}
+.choose-experience .content-wrapper h2 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+}
+.choose-experience .content-wrapper h2 span {
+  display: block;
+}
+@media (min-width: 368px) {
+  .choose-experience .content-wrapper h2 {
+    font-size: 4rem;
+    max-width: 400px;
+  }
+}
+@media (min-width: 768px) {
+  .choose-experience .content-wrapper h2 {
+    font-size: 4.5rem;
+  }
 }
