@@ -21,10 +21,14 @@
 
         span {
             display: block;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
+
+            @media @tablet {
+                font-size: 2.5rem;
+            }
         }
 
-        @media @mobile {
+        @media @pre-mobile {
             font-size: 3.5rem;
         }
 
@@ -40,55 +44,6 @@
 
         @media @tablet {
             margin: 0;
-        }
-    }
-
-    &.the-features {
-        padding-top: 7rem;
-        h2 {
-            font-size: 1.5rem;
-            text-transform: uppercase;
-
-            @media @tablet {
-                text-align: center;
-            }
-        }
-    }
-}
-
-.the-features {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    max-width: 600px;
-
-    @media @pre-tablet {
-        justify-content: space-between;
-    }
-
-    @media @tablet {
-        max-width: 1080px;
-    }
-    
-    p {
-        font-size: 1.4rem;
-    }
-
-    svg {
-        color: @primary;
-        max-width: 60px;
-        width: 100%;
-        height: auto;
-    }
-
-    & > div {
-        max-width: 220px;
-        text-align: center;
-        margin-bottom: 3rem;
-
-        @media @tablet {
-            margin-bottom: 0;
         }
     }
 }

@@ -29,15 +29,13 @@ p {
   line-height: 1.4;
   color: #777;
 }
+p.small {
+  font-size: 1.5rem;
+}
 .parallax {
-  height: 85vh;
+  height: 70vh;
   width: 100%;
   position: relative;
-}
-@media (min-width: 992px) {
-  .parallax {
-    height: 70vh;
-  }
 }
 .slider {
   width: 100vw;
@@ -132,7 +130,7 @@ p {
   width: 100%;
   min-height: 300px;
   position: relative;
-  margin-top: 3rem;
+  margin-top: 4rem;
   transition: 0.4s ease-out;
 }
 @media (min-width: 500px) {
@@ -205,23 +203,30 @@ p {
 header.content-container {
   max-width: 1080px;
   padding: 0 2rem;
-  width: 100%;
   height: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 2rem;
+}
+@media (min-width: 992px) {
+  header.content-container {
+    align-items: initial;
+    position: static;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 header.content-container .hero-content {
   color: #000;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   position: relative;
   z-index: 2;
-  width: 100%;
   height: fit-content;
-  margin-left: -2rem;
-  padding: 3rem 1.5rem;
-  max-width: 450px;
+  padding: 3rem 2rem;
+  text-align: center;
 }
 @media (min-width: 992px) {
   header.content-container .hero-content {
@@ -230,6 +235,7 @@ header.content-container .hero-content {
     max-width: 100%;
     margin-left: 0;
     padding: 0;
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,13 +248,7 @@ header.content-container .hero-content h1 {
 header.content-container .hero-content h1 span {
   display: block;
 }
-@media (min-width: 368px) {
-  header.content-container .hero-content h1 {
-    font-size: 4rem;
-    max-width: 400px;
-  }
-}
-@media (min-width: 992px) {
+@media (min-width: 500px) {
   header.content-container .hero-content h1 {
     font-size: 5rem;
   }
@@ -258,16 +258,17 @@ header.content-container .hero-content p {
   margin-bottom: 1rem;
 }
 header.content-container .hero-content .search-form {
+  display: none;
   min-height: 40px;
-  display: flex;
   margin-top: 2rem;
   z-index: 2;
+  margin-top: 4rem;
+  min-height: 50px;
+  margin-right: -100px;
 }
 @media (min-width: 992px) {
   header.content-container .hero-content .search-form {
-    margin-top: 4rem;
-    min-height: 50px;
-    margin-right: -100px;
+    display: flex;
   }
 }
 header.content-container .hero-content .search-form input {
@@ -309,6 +310,20 @@ header.content-container .hero-background {
   right: 0;
   z-index: -1;
 }
+header.content-container .hero-background::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.4s ease-out;
+  z-index: 2;
+}
 @media (min-width: 992px) {
   header.content-container .hero-background {
     width: 50%;
@@ -334,7 +349,7 @@ header.content-container .hero-background .image-wrapper img {
 .content-wrapper {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 5rem 2rem 0;
+  padding: 6rem 2rem 0;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -381,53 +396,5 @@ header.content-container .hero-background .image-wrapper img {
 @media (min-width: 992px) {
   .content-wrapper > p {
     margin: 0;
-  }
-}
-.content-wrapper.the-features {
-  padding-top: 7rem;
-}
-.content-wrapper.the-features h2 {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-}
-@media (min-width: 992px) {
-  .content-wrapper.the-features h2 {
-    text-align: center;
-  }
-}
-.the-features {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-  max-width: 600px;
-}
-@media (min-width: 500px) {
-  .the-features {
-    justify-content: space-between;
-  }
-}
-@media (min-width: 992px) {
-  .the-features {
-    max-width: 1080px;
-  }
-}
-.the-features p {
-  font-size: 1.4rem;
-}
-.the-features svg {
-  color: #a1d3a2;
-  max-width: 60px;
-  width: 100%;
-  height: auto;
-}
-.the-features > div {
-  max-width: 220px;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-@media (min-width: 992px) {
-  .the-features > div {
-    margin-bottom: 0;
   }
 }
