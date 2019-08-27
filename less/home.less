@@ -1,11 +1,3 @@
-.main-content {
-    background: @white;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    padding-bottom: 9rem;
-}
-
 .content-wrapper {
     .section-wrapper();
     text-align: center;
@@ -18,11 +10,15 @@
         padding-top: 0;
     }
 
+    &.full-width {
+        max-width: 100%;
+    }
+
     @media @tablet {
         text-align: left;
     }
 
-    & > h2 {
+    h2 {
         font-size: 3.2rem;
         line-height: 1.2; 
         text-align: center;
@@ -46,7 +42,7 @@
         }
     }
 
-    & > p {
+     p {
         max-width: 500px;
         margin: 0 auto;
 
@@ -65,36 +61,29 @@
     }
 }
 
+.choose-guides {
+    padding-top: 1.5rem;
+}
+
 .about-us {
-    margin-top: 6rem;
-    position: relative;
-
-    @media @pre-tablet {
-        margin-top: 7rem;
-    }
-
-    @media @tablet {
-        margin-top: 9rem;
-        height: 400px;
-        .primaryColorBg(.1);
-    }
+    padding-left: 0;
+    padding-right: 0;
 
     .excerpt {
-        max-width: 750px;
-        padding: 1rem 3rem 3rem;
-        margin: 0 auto;
+        height: 300px;
+        .primaryColorBg(.1);
 
         p {
             line-height: 1.6;
-        }
-
-        @media @pre-tablet {
+            max-width: 750px;
+            padding: 1rem 3rem 3.5rem;
+            margin: 0 auto;
             background: @white;
         }
     }
 
     .content-wrapper {
-        padding-top: 0; 
+       margin-top: -180px;
 
         video {
             width: 100%;
@@ -104,10 +93,88 @@
     }
 }
 
-.choose-guides {
+.cta-section {
     position: relative;
+    z-index: 2;
+    background: #00334e;
+    .section-wrapper();
+    padding-left: 3rem;
+    padding-right: 3rem;
 
     @media @tablet {
-        top: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .cta-content {
+        color: @white;
+        text-align: center;
+
+        @media @tablet {
+            text-align: left;
+        }
+        
+        h2 {
+            text-align: center;
+
+            @media @tablet {
+                text-align: left;
+            }
+        }
+
+        p {
+            color: @white;
+            margin-top: 1rem;
+        }
+    }
+
+    .cta-btns {
+        margin: 3rem auto 0;
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+
+        @media @pre-tablet {
+            display: block;
+            max-width: 100%;
+        }
+
+        @media @tablet {
+            margin: 3rem 0 0;
+        }
+
+        button:first-child {
+            margin-bottom: 2rem;
+
+            @media @pre-tablet {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+footer {
+    .primaryColorBg(.1);
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 5rem;
+    margin-top: -80px;
+
+    & > .content-wrapper {
+        .section-wrapper();
+
+        p {
+            text-align: center;
+            max-width: 100%;
+            font-size: 1.4rem;
+        }
     }
 }
