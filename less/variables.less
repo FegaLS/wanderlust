@@ -4,7 +4,7 @@
 @faintGray: #f9f9f9;
 @white: #fff;
 @black: #000;
-@primary: #a1d3a2;
+@primary: #a1d3a2; 
 
 //Font
 @headingFont: 'Alegreya Sans', sans-serif;
@@ -21,18 +21,18 @@
     border: @width solid #eee;
 }
 
-.section-wrapper(@p-top) {
+.primaryColorBg(@a) {
+    background: rgba(161, 211, 162, @a)
+}
+
+.section-wrapper() {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 6rem 2rem 0;
+    padding: 4rem 2rem;
     width: 100%;
     height: 100%;
 
     @media @pre-tablet {
-        padding: 7rem 2rem 0;
-    }
-
-    @media @tablet {
-        padding: @p-top 2rem 0;
+        padding: 5rem 2rem;
     }
 }
