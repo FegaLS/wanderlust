@@ -54,7 +54,7 @@
 
 
 .choose-experience {
-    padding-top: 4rem;
+    padding-top: 2rem;
 
     @media @tablet {
         padding-top: 5rem;
@@ -70,20 +70,27 @@
     padding-right: 0;
 
     .excerpt {
-        height: 300px;
-        .primaryColorBg(.1);
 
+        @media @tablet {
+            height: 300px;
+            .primaryColorBg(.1)
+        }
+        
         p {
             line-height: 1.6;
             max-width: 750px;
             padding: 1rem 3rem 3.5rem;
             margin: 0 auto;
             background: @white;
+            text-align: left;
         }
     }
 
     .content-wrapper {
-       margin-top: -180px;
+
+        @media @tablet {
+            margin-top: -180px;
+        }
 
         video {
             width: 100%;
