@@ -26,7 +26,7 @@ function printError (error){
 function canvasSlider(profile) {
     const canvasArray = document.querySelectorAll('.canvas');
     const images = profile.results.map(img => {
-        return `<img src="${img.picture.large}" class="hvr-kenburns" />`;
+        return `<img src="${img.picture.large}" class="hvr-grow" />`;
     });
     const imageString = images.join('');
 

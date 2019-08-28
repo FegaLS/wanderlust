@@ -50,6 +50,13 @@
             margin: 0;
         }
     }
+
+    video {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        background: @overlayBlack;
+    }
 }
 
 
@@ -84,13 +91,6 @@
 
         @media @tablet {
             margin-top: -180px;
-        }
-
-        video {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            background: @overlayBlack;
         }
     }
 }
@@ -184,6 +184,10 @@ footer {
 .descriptions {
     .section-wrapper();
     max-width: 550px;
+
+    &.no-top {
+        padding-top: 0;
+    }
 
     h3 {
         margin-bottom: 1.5rem;

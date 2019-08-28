@@ -16,9 +16,9 @@ header.content-container {
 
         .hero-content {
             color: @black;
-            background: rgba(255, 255, 255, .8);
+            background: rgba(255, 255, 255, .9);
             position: relative;
-            z-index: 2;
+            z-index: 3;
             height: fit-content;
             padding: 3rem 2rem;
             text-align: center;
@@ -49,7 +49,6 @@ header.content-container {
             position: absolute;
             right: 0;
             top: 0;
-            z-index: -1;
             background: rgba(0, 0, 0, .5);
     
             &::before {
@@ -169,6 +168,7 @@ header.content-container {
                 @media @tablet {
                     width: 50%;
                     height: 70vh;
+                    z-index: -1;
                 }
             }
 
