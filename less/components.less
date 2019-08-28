@@ -192,11 +192,22 @@ nav {
     right: 0;
     top: 2rem;
     width: 100%;
-    z-index: 3;
+    z-index: 5;
 
     .navigation {
         display: flex;
         align-items: center;
+        padding: 2rem;
+
+        @media @tablet {
+            padding: 0 2rem;
+        }
+
+        &.is-home {
+            @media @tablet {
+                padding: 0;
+            }
+        }
 
         ul {
             padding-left: 10rem;
@@ -225,7 +236,6 @@ nav {
             font-family: @headingFont;
             font-weight: bold;
             color: @white;
-            margin-left: 2rem;
         }
 
         &.is-home a {

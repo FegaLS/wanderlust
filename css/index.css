@@ -367,11 +367,22 @@ nav {
   right: 0;
   top: 2rem;
   width: 100%;
-  z-index: 3;
+  z-index: 5;
 }
 nav .navigation {
   display: flex;
   align-items: center;
+  padding: 2rem;
+}
+@media (min-width: 992px) {
+  nav .navigation {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 992px) {
+  nav .navigation.is-home {
+    padding: 0;
+  }
 }
 nav .navigation ul {
   padding-left: 10rem;
@@ -398,7 +409,6 @@ nav .navigation > a {
   font-family: 'Alegreya Sans', sans-serif;
   font-weight: bold;
   color: #fff;
-  margin-left: 2rem;
 }
 @media (min-width: 992px) {
   nav .navigation.is-home a {
@@ -655,8 +665,8 @@ nav button {
   padding: 4rem 2rem;
   width: 100%;
   height: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 @media (min-width: 500px) {
   .cta-section {
@@ -695,11 +705,11 @@ nav button {
 }
 .cta-section .cta-btns {
   margin: 3rem auto 0;
-  max-width: 200px;
+  max-width: 150px;
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 500px) {
+@media (min-width: 368px) {
   .cta-section .cta-btns {
     display: block;
     max-width: 100%;
@@ -713,7 +723,7 @@ nav button {
 .cta-section .cta-btns button:first-child {
   margin-bottom: 2rem;
 }
-@media (min-width: 500px) {
+@media (min-width: 368px) {
   .cta-section .cta-btns button:first-child {
     margin-right: 20px;
     margin-bottom: 0;
