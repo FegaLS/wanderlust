@@ -20,6 +20,7 @@
     position: relative;
     margin-right: 2.5rem;
     overflow: hidden;
+    background: @overlayBlack;
 
     a {
         display: block;
@@ -50,5 +51,19 @@
         height: 100%;
         object-fit: cover;
         transition: 0.25s ease-out;
+    }
+
+    h3 {
+        z-index: 3;
+        position: relative;
+        font-size: 1.5rem;
+        color: #000;
+        background: white;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        padding: .5rem 2rem;
+        min-width: 100px;
+        text-align: center;
     }
 }

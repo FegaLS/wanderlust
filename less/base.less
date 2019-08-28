@@ -11,7 +11,6 @@ html {
 body {
     font-family: @bodyFont;
     overflow-x: hidden;
-    height: 100vh;
 }
 
 ul {
@@ -21,15 +20,21 @@ ul {
 
 button {
     font-size: 1.6rem;
-    padding: 1rem 1.5rem;
-    min-width: 150px;
+    font-family: @headingFont;
+    padding: 0.5rem 1.2rem;
+    min-height: 40px;
+    min-width: 120px;
     border: none;
     outline: none;
-    border-radius: 5px;
+
+    &.btn-small {
+        min-height: 35px;
+        min-width: 100px;
+    }
 
     &.btn-light {
         background: @white;
-        color: @primary;
+        color: @black;
     }
 
     &.btn-primary {
