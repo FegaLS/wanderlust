@@ -61,7 +61,7 @@ header.content-container {
                 right: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0, 0, 0, .3);
+                background: rgba(0, 0, 0, .4);
                 transition: 0.4s ease-out;
                 z-index: 2;
             }
@@ -99,6 +99,7 @@ header.content-container {
             @media @tablet {
                 position: static;
                 display: block;
+                padding: 0;
             }
 
             .hero-content {
@@ -179,7 +180,7 @@ header.content-container {
 
 // === Nav Component ===
 nav {
-    max-width: 1140px;
+    max-width: 1180px;
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
@@ -198,8 +199,8 @@ nav {
         align-items: center;
 
         ul {
-            padding-left: 5rem;
-            display: flex;
+            padding-left: 10rem;
+            display: none;
 
             li > a {
                 color: @white;
@@ -212,6 +213,10 @@ nav {
                 &:hover {
                     opacity: .7;
                 }
+            }
+
+            @media @tablet {
+                display: flex;
             }
         }
 
