@@ -1,6 +1,5 @@
 /* Glow */
 .hvr-glow {
-    display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
@@ -17,7 +16,6 @@
 
 /* Float */
 .hvr-float {
-    display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
@@ -85,7 +83,6 @@
 }
 
 .hvr-fade {
-    display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
@@ -102,6 +99,40 @@
     }
 }
   
+ 
+.sliding-container {
+    overflow: hidden;
+}
   
+.sliding-background {
+    height: fit-content;
+    width: 5076px;
+    display: flex;
+    animation: slide 60s linear infinite;
+
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+  
+@keyframes slide{
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1692px, 0, 0);
+    }
+}
+
+.canvas {
+    width: 1680px;
+    height: fit-content;
+
+    img {
+        width: 80px;
+        margin: 0;
+        margin-top: -3px;
+    }
+}
 
   
