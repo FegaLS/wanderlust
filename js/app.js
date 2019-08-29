@@ -1,5 +1,5 @@
 const navToggler = document.querySelector('.responsive-nav');
-const mobileNav = document.querySelector('.navigation');
+const mobileNav = document.querySelector('nav');
 
 navToggler.addEventListener('click', function() {
     navToggler.classList.toggle('open');
