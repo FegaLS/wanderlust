@@ -1,0 +1,62 @@
+// === Call to action section ===
+.cta-section {
+    position: relative;
+    z-index: 2;
+    background: #00334e;
+    .section-wrapper();
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @media @tablet {
+        .flx-center-sb();
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .cta-content {
+        color: @white;
+        text-align: center;
+
+        @media @tablet {
+            text-align: left;
+        }
+        
+        h2 {
+            text-align: center;
+
+            @media @tablet {
+                text-align: left;
+            }
+        }
+
+        p {
+            color: @white;
+            margin-top: 1rem;
+        }
+    }
+
+    .cta-btns {
+        margin: 3rem auto 0;
+        max-width: 150px;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 340px) {
+            display: block;
+            max-width: 100%;
+        }
+
+        @media @tablet {
+            margin: 3rem 0 0;
+        }
+
+        button:first-child {
+            margin-bottom: 2rem;
+
+            @media (min-width: 340px) {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
