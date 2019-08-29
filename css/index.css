@@ -617,8 +617,10 @@ footer .content-wrapper p {
   animation: slide 60s linear infinite;
   overflow-x: hidden;
 }
-.slide-container .sliding-background:hover {
-  animation-play-state: paused;
+@media (min-width: 1140px) {
+  .slide-container .sliding-background:hover {
+    animation-play-state: paused;
+  }
 }
 @keyframes slide {
   0% {

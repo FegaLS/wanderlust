@@ -138,9 +138,11 @@
         display: flex;
         animation: slide 60s linear infinite;
         overflow-x: hidden;
-    
-        &:hover {
-            animation-play-state: paused;
+        
+        @media @tablet {
+            &:hover {
+                animation-play-state: paused;
+            }
         }
 
         @keyframes slide {
