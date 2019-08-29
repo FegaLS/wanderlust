@@ -22,14 +22,6 @@
     overflow: hidden;
     background: @overlayBlack;
 
-    a {
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-    }
-
     &:first-of-type {
         @media @tablet {
             margin-left: -6px;
@@ -42,6 +34,14 @@
         @media @pre-tablet {
             margin-right: 3.5rem;
         }
+    }
+
+    a {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
     }
 
     img {

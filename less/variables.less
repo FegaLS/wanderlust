@@ -2,10 +2,12 @@
 // Colors
 @readableGray: #777;
 @faintGray: #f9f9f9;
+@borderGray: #eeeeee;
 @white: #fff;
 @black: #000;
 @overlayBlack: rgba(0, 0, 0, .3);
 @primary: #a1d3a2; 
+@primaryColorBg: rgba(161, 211, 162, .1);
 @alternate: #2098D1;
 
 //Font
@@ -20,14 +22,6 @@
 
 
 //Mixins
-.borderline(@width) {
-    border: @width solid #eee;
-}
-
-.primaryColorBg(@a) {
-    background: rgba(161, 211, 162, @a)
-}
-
 .section-wrapper() {
     max-width: 1080px;
     margin: 0 auto;
@@ -39,3 +33,20 @@
         padding: 5rem 2rem;
     }
 }
+
+.flx-col-center() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flx-center-sb() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+

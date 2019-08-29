@@ -1,0 +1,60 @@
+.content-wrapper {
+    .section-wrapper();
+    text-align: center;
+
+    &.no-bottom {
+        padding-bottom: 0;
+    }
+
+    &.no-top {
+        padding-top: 0;
+    }
+
+    &.full-width {
+        max-width: 100%;
+    }
+
+    @media @tablet {
+        text-align: left;
+    }
+
+    .headline {
+        font-size: 3.2rem;
+        line-height: 1.2; 
+        text-align: center;
+
+        span {
+            display: block;
+            font-size: 2.2rem;
+
+            @media @tablet {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media @pre-tablet {
+            font-size: 3.5rem;
+        }
+
+        @media @tablet {
+            font-size: 4.5rem;
+            text-align: left;
+        }
+    }
+
+    .summary {
+        max-width: 500px;
+        margin: 0 auto;
+
+        @media @tablet {
+            margin: 0;
+        }
+    }
+
+    video {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        background: @overlayBlack;
+    }
+}

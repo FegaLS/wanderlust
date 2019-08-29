@@ -129,38 +129,39 @@
 // Infinite Background Scroll
 .slide-container {
     overflow: hidden;
-}
-  
-.sliding-background {
-    height: fit-content;
-    width: 5076px;
-    display: flex;
-    animation: slide 60s linear infinite;
-    overflow-x: hidden;
 
-    &:hover {
-        animation-play-state: paused;
-    }
+    .sliding-background {
+        height: fit-content;
+        width: 5076px;
+        display: flex;
+        animation: slide 60s linear infinite;
+        overflow-x: hidden;
+    
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes slide {
+            0% {
+              transform: translate3d(0, 0, 0);
+            }
+            100% {
+              transform: translate3d(-1692px, 0, 0);
+            }
+        }
+
+        .canvas {
+            width: 1680px;
+            height: fit-content;
+        
+            img {
+                width: 80px;
+                margin: 0;
+                margin-top: -3px;
+            }
+        }
+    } 
 }
 
-.canvas {
-    width: 1680px;
-    height: fit-content;
-
-    img {
-        width: 80px;
-        margin: 0;
-        margin-top: -3px;
-    }
-}
-  
-@keyframes slide {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(-1692px, 0, 0);
-    }
-}
 
   

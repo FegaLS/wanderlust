@@ -13,9 +13,9 @@ body {
     overflow-x: hidden;
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 0;
+a {
+    text-decoration: none;
+    font-family: @headingFont;
 }
 
 button {
@@ -42,10 +42,6 @@ button {
         color: @white;
     }
 }
-
-a {
-    text-decoration: none;
-}
    
 h1, h2, h3, h4, h5, h6 {
     font-family: @headingFont;
@@ -59,4 +55,9 @@ p {
     &.small {
         font-size: 1.5rem
     }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
 }
