@@ -1,3 +1,12 @@
+const navToggler = document.querySelector('.responsive-nav');
+const mobileNav = document.querySelector('.navigation');
+
+navToggler.addEventListener('click', function() {
+    navToggler.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+})
+
+
 const url =' https://randomuser.me/api/?results=105';
 
 fetch(url)

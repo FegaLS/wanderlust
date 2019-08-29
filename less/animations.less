@@ -1,3 +1,4 @@
+// Grow on Hover
 .hvr-grow {
     display: inline-block;
     vertical-align: middle;
@@ -37,6 +38,7 @@
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
     }
 }
+
 
 /* Float */
 .hvr-float {
@@ -106,6 +108,7 @@
 
 }
 
+// Fade
 .hvr-fade {
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -123,7 +126,7 @@
     }
 }
   
- 
+// Infinite Background Scroll
 .slide-container {
     overflow: hidden;
 }
@@ -139,15 +142,6 @@
         animation-play-state: paused;
     }
 }
-  
-@keyframes slide{
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(-1692px, 0, 0);
-    }
-}
 
 .canvas {
     width: 1680px;
@@ -157,6 +151,15 @@
         width: 80px;
         margin: 0;
         margin-top: -3px;
+    }
+}
+  
+@keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1692px, 0, 0);
     }
 }
 
