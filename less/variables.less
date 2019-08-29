@@ -20,11 +20,20 @@
 @pre-tablet: ~"(min-width: 500px)";
 @nav-breakpoint: ~"(min-width: 800px)";
 @tablet: ~"(min-width: 1140px)";
+@laptop: ~"(min-width: 1560px)";
 
 
 //Mixins
-.section-wrapper() {
+.site-width() {
     max-width: 1080px;
+
+    @media @laptop {
+        max-width: 1280px;
+    }
+}
+
+.section-wrapper() {
+    .site-width();
     margin: 0 auto;
     padding: 4rem 2rem;
     width: 100%;

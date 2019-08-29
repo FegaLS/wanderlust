@@ -66,6 +66,11 @@ ul {
   height: 100%;
   text-align: center;
 }
+@media (min-width: 1560px) {
+  .content-wrapper {
+    max-width: 1280px;
+  }
+}
 @media (min-width: 500px) {
   .content-wrapper {
     padding: 5rem 2rem;
@@ -145,6 +150,11 @@ nav {
   nav {
     justify-content: initial;
     padding: 0;
+  }
+}
+@media (min-width: 1560px) {
+  nav {
+    max-width: 1380px;
   }
 }
 nav.open {
@@ -395,6 +405,11 @@ header .content-container .hero-background .image-wrapper img {
 }
 header.is-home-header {
   max-width: 1080px;
+}
+@media (min-width: 1560px) {
+  header.is-home-header {
+    max-width: 1280px;
+  }
 }
 @media (min-width: 1140px) {
   header.is-home-header {
@@ -781,6 +796,11 @@ footer .content-wrapper p {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+@media (min-width: 1560px) {
+  .cta-section {
+    max-width: 1280px;
+  }
+}
 @media (min-width: 500px) {
   .cta-section {
     padding: 5rem 2rem;
@@ -884,6 +904,11 @@ footer .content-wrapper p {
   width: 100%;
   height: 100%;
   max-width: 550px;
+}
+@media (min-width: 1560px) {
+  .descriptions {
+    max-width: 1280px;
+  }
 }
 @media (min-width: 500px) {
   .descriptions {
