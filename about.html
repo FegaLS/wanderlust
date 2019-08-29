@@ -102,6 +102,16 @@
         </div>
     </footer>
 
+    <script>
+        // Navigation Logic
+        const navToggler = document.querySelector('.responsive-nav');
+        const mobileNav = document.querySelector('nav');
+
+        navToggler.addEventListener('click', function() {
+            navToggler.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+        })
+    </script>
     <script src="./js/app.js"></script>
 </body>
 </html>

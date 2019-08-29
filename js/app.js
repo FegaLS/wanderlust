@@ -1,37 +1,12 @@
-const navToggler = document.querySelector('.responsive-nav');
-const mobileNav = document.querySelector('nav');
-
-navToggler.addEventListener('click', function() {
-    navToggler.classList.toggle('open');
-    mobileNav.classList.toggle('open');
-})
-
-
 const url =' https://randomuser.me/api/?results=105';
 
 fetch(url)
-    .then(handleErrors)
-    .then(parseJSON)
+    .then(res => res.json())
     .then(canvasSlider)
-    .catch(printError);
-
-function handleErrors (res){
-    if(!res.ok){
-        throw error(res.status);
-    }
-    console.log(res);
-    return res;
-}
-      
-function parseJSON (res){
-    return res.json();
-}
-      
-function printError (error){
-    console.log(error);
-}
+    .catch(error => console.log(error));
 
 
+// Image Generator for image scroll slider
 function canvasSlider(profile) {
     const canvasArray = document.querySelectorAll('.canvas');
     const images = profile.results.map(img => {
