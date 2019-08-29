@@ -509,12 +509,14 @@ footer .content-wrapper p {
   position: relative;
   z-index: 1;
 }
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  z-index: 3;
+@media (min-width: 1140px) {
+  .hvr-grow:hover,
+  .hvr-grow:focus,
+  .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 3;
+  }
 }
 /* Glow */
 .hvr-glow {
