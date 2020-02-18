@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:500|Lato&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/index.css">
+    <title>About Us - Wanderlust</title>
+</head>
+<body>
+
+    <nav>
+        <a href="./index.html" class="logo">Wanderlust</a>
+
+        <div class="navigation">
+            <ul>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">For Guides</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+            <button class="btn-light btn-small hvr-fade hvr-glow">Log In</button>
+        </div>
+
+        <button class="responsive-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <header>
+        <div class="content-container">
+            <div class="hero-content">
+                <p>Who we are</p>
+                <h1><span>The world's</span> largest travel platform</h1>
+            </div>
+            <div class="hero-background">
+                <div class="image-wrapper" id="first">
+                    <img src="./img/about-header-bg.jpg" alt="A man with a suitcase heading off into the horizon"/>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <section class="descriptions">
+            <h3>Our Purpose</h3>
+            <p>With a mission to empower people to experience the world, Wanderlust connects travellers with a large selection of incredible places to stay, including everything from apartments, vacation homes, and family-run B&Bs to 5-star luxury resorts, tree houses and even igloos through our vetted and trusted trip guides. We are dedicated to the highest quality of customer service delivered with a sense of warmth, friendliness, individual pride, and company spirit to help take the friction out of travel.</p>
+        </section>
+
+        <section class="content-wrapper no-top no-bottom">
+            <video src="https://res.cloudinary.com/fega-eze/video/upload/v1566913547/wanderlust-bw1/Pexels_Videos_2711222.mp4" loop controls>
+                Your browser does not support this video tag
+            </video>
+        </section>
+        
+        <section class="descriptions">
+            <h3>Our Values</h3>
+            <p>We have a commitment to sustainability and to acting in an environmentally friendly way. We believe in innovation and excellence which is embodied by our "Think Different" approach to great travel experiences.</p>
+        </section>
+
+        <section class="descriptions no-top">
+            <h3>Life at Wanderlust</h3>
+            <p>Wanderlust customers come from all walks of life, so it’s only natural that our company does too. We celebrate the unique perspectives, and life experiences through which our employees see the world.</p>
+        </section>
+
+        <div class="slide-container">
+            <div class="sliding-background">
+                <div class="canvas"></div>
+                <div class="canvas"></div>
+                <div class="canvas"></div>
+            </div>
+        </div>
+
+        <div class="descriptions">
+            <p> We work hard to maintain an inclusive and welcoming environment that stimulates innovation, creativity and collaboration … which creates both a great employee AND a great customer experience. We are committed to provide our employees a stable work environment with equal opportunity for learning and personal growth. We’d love for you to join us and add to our rich mix!</p>
+        </div>
+
+        <section class="content-wrapper no-bottom">
+            <div class="cta-section">
+                <div class="cta-content">
+                    <h2 class="headline">Take a trip with us</h2>
+                    <p class="summary">We strive to provide meaningful, rewarding and challenging adventures for you with the highest level of consultation services.</p>
+                </div>
+                <div class="cta-btns">
+                    <button class="btn-light hvr-fade hvr-glow">Log In</button>
+                    <button class="btn-primary hvr-fade hvr-glow">Sign Up</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="content-wrapper no-bottom">
+            <p>© 2019 Wanderlust</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation Logic
+        const navToggler = document.querySelector('.responsive-nav');
+        const mobileNav = document.querySelector('nav');
+
+        navToggler.addEventListener('click', function() {
+            navToggler.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+            document.body.classList.toggle('fixed');
+        })
+    </script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

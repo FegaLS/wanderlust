@@ -1,0 +1,174 @@
+// === Header Component ===
+header {
+    padding: 2rem;
+    height: 85vh;
+    position: relative;
+
+    .content-container {
+        .flx-col-center();
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+
+        .hero-content {
+            color: @black;
+            background: rgba(255, 255, 255, .9);
+            position: relative;
+            z-index: 3;
+            height: fit-content;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        
+            h1 {
+                font-size: 4rem;
+                line-height: 1.2; 
+        
+                span {
+                    display: block;
+                }
+        
+                @media @pre-tablet {
+                    font-size: 5rem;
+                }
+            }
+        
+            p {
+                color: @readableGray;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .hero-background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: rgba(0, 0, 0, .5);
+    
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, .6);
+                transition: 0.4s ease-out;
+                z-index: 2;
+            }
+        
+            .image-wrapper {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+        
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+    }
+    
+
+    &.is-home-header {
+        .site-width();
+
+        @media @tablet {
+            align-items: initial;
+            position: static;
+            margin: 0 auto;
+            width: 100%;
+            height: 70vh;
+        }
+
+        .content-container {
+        
+            @media @tablet {
+                position: static;
+                display: block;
+                padding: 0;
+            }
+
+            .hero-content {
+                @media @tablet {
+                    width: 50%;
+                    height: 100%;
+                    max-width: 100%;
+                    margin-left: 0;
+                    padding: 0;
+                    text-align: left;
+                    .flx-col-center();
+                }
+    
+                .search-form {
+                    display: none;
+                    min-height: 40px;
+                    margin-top: 2rem;
+                    z-index: 2;
+                    margin-top: 4rem;
+                    min-height: 50px;
+                    margin-right: -100px;
+            
+                    @media @tablet {
+                        display: flex;                
+                    }
+            
+                    input {
+                        display: inline-block;
+                        width: 100%;
+                        border: none; 
+                        outline: none;
+            
+                        &[type="search"] {
+                            width: 70%;
+                            padding: 0 1rem;
+                            font-size: @defaultFontSize;
+                            color: @readableGray;
+                            background: @faintGray;
+                            border-right: none;
+            
+                            @media @tablet {
+                                border: 1px solid @borderGray;
+                                padding: 0 1.5rem;
+                                width: calc(100% - 100px);
+                            }
+                        }
+            
+                        &[placeholder] {
+                            font-size: 1.3rem;
+                        }
+            
+                        &[type="button"] {
+                            width: 30%;
+                            max-width: 100px;
+                            background: @primary;
+                            color: @white;
+                            font-size: 1.5rem;
+                            font-family: @headingFont;
+                        }
+                    }
+                }
+            }
+    
+            .hero-background {
+                @media @tablet {
+                    width: 50%;
+                    height: 70vh;
+                    z-index: -1;
+                }
+            }
+
+        }
+    }
+}
